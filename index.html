@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <!-- <h1>{{ product }}</h1>
+      <p></p><strong>Decsription : </strong> {{ desc }}</p> -->
+        <div class="nav-bar"></div>
+        <div class="cart">Cart({{items}})</div>
+        <product-display 
+            :premium="premium"
+            @add-to-cart="updateCart"    
+            @remove-from-cart="removeFromCart"
+        ></product-display>
+
+    </div>
+
+    <!-- Import Js -->
+    <script src="./main.js"></script>
+
+    <!-- Import Component -->
+    <script src="./components/ProductDisplay.js"></script>
+
+    <!-- Import Details Component -->
+    <script src="./components/ProductDetails.js"></script>
+
+    <!-- Import the Review form component  -->
+    <script src="./components/ReviewForm.js"></script>
+
+    <!-- Import the Review List component -->
+    <script src="./components/ReviewList.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+
+  </body>
+</html>
+
+<!-- Vues is reactive and under the hood it has a reactivity system -->
